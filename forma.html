@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Запись на тренировку</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header-container2">
+        <div class="logo">
+            <a href="index.html"><img src="../GolfClub/img/logoblack.png" alt="Логотип"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a style="color: black;" href="index.html">Главная</a></li>
+                <li><a style="color: black;" href="trpolya.html">Тренировочное поле</a></li>
+                <li><a style="color: black;" href="history.html">История</a></li>
+                <li><a style="color: black;" href="chlenstvo.html">Членство</a></li>
+            </ul>
+        </nav>
+    </div>
+
+<div class="forms">
+
+  <h1>Запись на тренировку</h1>
+
+  <form id="bookingForm">
+    <label>
+      Имя:
+      <input type="text" id="name" required />
+    </label>
+
+    <label>
+      Дата:
+      <input type="date" id="date" required />
+    </label>
+
+    <label>
+      Тренер:
+      <select id="trainer" required>
+        <option value="">-- Выберите тренера --</option>
+        <option value="Кармолин Матвей">Кармолин Матвей</option>
+        <option value="Максим Данилин">Максим Данилин</option>
+        <option value="Вера Новицкая">Вера Новицкая</option>
+      </select>
+    </label>
+
+    <button type="submit" class="btn-submit">Записаться</button>
+
+  </form>
+
+  <h2 style="margin-bottom: 20px;">Ваши записи</h2>
+  <div id="cardsContainer"></div>
+</div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('bookingForm');
+  const nameInput = document.getElementById('name');
+  const dateInput = document.getElementById('date');
+  const trainerSelect = document.getElementById('trainer');
+  const cardsContainer = document.getElementById('cardsContainer');
+
+
+  loadCards();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = nameInput.value.trim();
+    const date = dateInput.value;
+    const trainer = trainerSelect.value;
+
+    if (!name || !date || !trainer) {
+      alert("Пожалуйста, заполните все поля.");
+      return;
+    }
+
+    const booking = { name, date, trainer };
+    saveBooking(booking);
+    addCard(booking);
+    form.reset();
+  });
+
+  function saveBooking(booking) {
+    const bookings = JSON.parse(localStorage.getItem('bookings') || '[]');
+    bookings.push(booking);
+    localStorage.setItem('bookings', JSON.stringify(bookings));
+  }
+
+  function loadCards() {
+    const bookings = JSON.parse(localStorage.getItem('bookings') || '[]');
+    bookings.forEach(addCard);
+  }
+
+  function addCard(booking) {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <strong>Имя:</strong> ${booking.name}<br>
+      <strong>Дата:</strong> ${booking.date}<br>
+      <strong>Тренер:</strong> ${booking.trainer}
+    `;
+    cardsContainer.appendChild(card);
+  }
+});
+
+  </script>
+
+
+
+<div style="padding-bottom: 0px; margin-top: 150px;" class="footer-container">
+    <div class="menu">
+        <a href="index.html">Главная</a>
+        <a href="trpolya.html">Тренировочное поле</a>
+        <a href="history.html">История</a>
+        <a href="chlenstvo.html">Членство</a>
+    </div>
+    <div style="padding-bottom: 0px;" class="contentf">
+        <div class="left-image">
+            <img src="../GolfClub/img/gerb.png" alt="Логотип слева">
+        </div>
+        <div class="info">
+            <p style="font-size: 20px;">36 Golf Links Road<br>
+            Newcastle Co Down.<br>
+            BT33 0AN<br>
+            Северная Ирландия<br>
+            Телефон: +79032777301</p>
+        </div>
+        <div class="partners-section">
+            <div class="partners-title">Наши партнеры</div>
+            <div class="partners">
+                <img src="../GolfClub/img/lit.png" alt="LIT ENERGY">
+                <img src="../GolfClub/img/cyber.png" alt="CYBER SHOKE">
+                <img src="../GolfClub/img/stake.png" alt="Stake">
+                <img src="../GolfClub/img/poco.png" alt="POCO by Xiaomi">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

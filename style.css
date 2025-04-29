@@ -1,0 +1,753 @@
+* {
+    margin: 0;
+
+}
+
+
+.fon{
+    background:url(../GolfClub/img/fon.png) no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    flex-direction: column;
+}
+
+header {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10; 
+}
+
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: Roboto Slab;
+}
+
+
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: white;
+    padding:0px ;
+}
+
+.text{
+    align-items: center;
+    font-size: 48px;
+}
+
+.text2{
+    align-items: center;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.fon2{
+    background:url(../GolfClub/img/fon2.png) no-repeat center center/cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.history{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.content{
+    max-width: 800px;
+}
+
+p{
+    font-size: 24px;
+    color: white;
+    line-height: 1.6;
+}
+
+h1{
+    font-size: 48px;
+    color: white;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    border-bottom: 2px solid white;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    transition: 0.3s;
+    margin-top: 10%;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+.logo img {
+    max-width: 100%;
+    max-height: 50%;
+    padding-right: 5%;
+}
+
+
+
+.training-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: url('../GolfClub/img/fon3.png') no-repeat center/cover;
+    height: 80vh;
+}
+
+.mapt{
+    text-align: left;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 40vh;
+    font-size: xxx-large;
+    font-weight: bolder;
+
+}
+
+.description-section{
+    text-align: center;
+    max-width: 36%;
+}
+
+
+.chlnstv{
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+}
+
+.chlnstvZ{
+    display: flex;
+    font-size: xxx-large;
+    align-items: end;
+    height: 17vh;
+    justify-content: flex-start;
+    width: 33vh;
+}
+
+
+.chlnstvtext{
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    width: 32vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chlnstvimg{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 56vh;
+}
+
+
+
+
+
+
+
+
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+.quote-box {
+    position: relative;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1.7;
+    padding: 30px;
+    max-width: 35vh;
+}
+.quote-box::before,
+.quote-box::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+}
+.quote-box::before {
+    top: -5px;
+    left: -5px;
+    width: 10vh;
+    height: 2px;
+}
+.quote-box::after {
+    bottom: -5px;
+    right: -5px;
+    width: 10vh;
+    height: 2px;
+}
+.quote-box .border-lines::before,
+.quote-box .border-lines::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+    width: 2px;
+    height: 10vh;
+}
+.quote-box .border-lines::before {
+    top: -5px;
+    left: -5px;
+}
+.quote-box .border-lines::after {
+    bottom: -5px;
+    right: -5px;
+}
+
+.btnb{
+    display: inline-block;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 24px;
+    transition: 0.3s;
+    margin-top: 10%;
+}
+
+
+
+.footer-container {
+    background-color: #000;
+    color: white;
+    padding: 20px;
+}
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 15vh;
+    font-size: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+.contentf {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+}
+.left-image {
+    padding-right: 20px;
+}
+
+.info {
+    padding-right: 30px;
+    border-right: 1px solid white;
+    padding-left: 20px;
+}
+.partners-section {
+    padding-left: 30px;
+}
+.partners-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.partners {
+    display: flex;
+    gap: 8vh;
+    align-items: center;
+}
+.partners img {
+    height: 100%;
+}
+
+/* history */
+
+.hfon{
+    background:url(../GolfClub/img/fonhistory.png) no-repeat center center/cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.texth{
+    align-items: center;
+    font-size: 48px;
+    line-height: 2;
+    color: white;
+    font-family: Courier, monospace;
+}
+
+.texth2{
+    align-items: center;
+    font-size: 64px;
+    color: white;
+    font-family:Courier, monospace ;
+}
+
+.hconteiner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.btnh{
+    display: inline-block;
+    padding: 10px 25px;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 36px;
+    transition: 0.3s;
+    margin-top: 2%;
+}
+
+.hconteiner2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.texth3{
+    width: 67vh;
+    font-size: 32px;
+    text-align: center;
+
+}
+
+.fonh4{
+    background: url(../GolfClub/img/fonh4.png)no-repeat center center/cover;
+    height:65vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnh2{
+    display: inline-block;
+    padding: 10px 25px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 36px;
+    transition: 0.3s;
+    margin-top: 2%;
+}
+
+.texth4{
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    line-height: 1.6;
+    width:70%;
+}
+
+.fonh5{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 5% 0%;
+}
+
+.texth5{
+    width: 80vh;
+    text-align: center;
+    font-size: 32px;
+    line-height: 1.6;
+    background-color: rgba(244, 244, 244, 1);
+    padding: 2%;
+}
+
+
+.fonh6{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 5% 0%;
+}
+
+.texth6{
+    width: 80vh;
+    text-align: center;
+    font-size: 32px;
+    line-height: 1.6;
+    background-color: rgba(244, 244, 244, 1);
+    padding: 2%;
+}
+
+.hconteiner3{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5%;
+}
+
+/* Тренировочные поля */
+
+.header-container2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 1200px;
+}
+
+.fontr6{
+    background: url(../GolfClub/img/fontr6.png)no-repeat center center/cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;;
+}
+
+.texttr{
+    align-items: center;
+    font-size: 50px;
+    line-height: 2;
+    color: white;
+    font-family: Courier, monospace;
+}
+
+.texttr2{
+    align-items: center;
+    font-size: 48px;
+    color: white;
+    font-family:Courier, monospace ;
+}
+
+
+.fontr7{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 5% 0%;
+}
+
+.texttr3{
+    width: 70vh;
+    text-align: center;
+    font-size: 32px;
+    line-height: 1.6;
+    background-color: rgba(244, 244, 244, 1);
+    padding: 2%;
+}
+
+.hconteiner4{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5%;
+}
+
+
+
+
+
+.hole-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.hole-button {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+
+
+.hole-button.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    bottom: -3px;
+    left: 0;
+}
+.hole-button:hover {
+    color: #555;
+}
+.layout-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+
+}
+.text-section {
+    width: 21%;
+    font-size: 18px;
+    text-align: left;
+    line-height: 1.6;
+}
+.image-section {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hole-image {
+    width: 100%;
+}
+.hole-details p {
+    font-size: 16px;
+    color: #444;
+    text-align: center;
+}
+
+
+/* членство */
+
+
+.fonch8{
+    background: url(../GolfClub/img/fonch8.png)no-repeat center center/cover;
+    height: 57vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;;
+}
+
+.textch{
+    align-items: center;
+    font-size: 50px;
+    line-height: 2;
+    color: white;
+    font-family: Courier, monospace;
+}
+
+.hconteiner5{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textch2{
+    width: 75%;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 24px;
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+
+/* контакты */
+
+
+.fonkon{
+    background: url(../GolfClub/img/fonkon.png) no-repeat center center/cover ;
+    height: 64vh;
+}
+
+.textkon{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    padding-top: 5%;
+}
+
+.textkon2{
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    margin-top: 50px;
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+.textkon3{
+    width: 84vh;
+    font-size: 24px;
+}
+
+
+.yandex{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+.hconteiner6{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%
+}
+
+
+
+
+
+/* Forma */
+
+.forms {
+    background: #f2f2f2;
+    padding: 40px;
+    max-width: 600px;
+    margin: auto;
+    color: #333;
+    margin-top: 50px;
+  }
+
+  
+h1, h2 {
+    text-align: center;
+    color: #000000;
+  }
+  
+  form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  .btn-submit {
+    background-color: #27ae60;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+  
+  .btn-submit:hover {
+    background-color: #219150;
+  }
+  
+  
+  
+  .card {
+    background: white;
+    border-left: 5px solid #27ae60;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .card strong {
+    display: inline-block;
+    width: 80px;
+    color: #000000;
+  }
+
+
+
+
+
+
+
+
+
+
